@@ -1,0 +1,41 @@
+/* 手機尺寸的設定 */
+
+@media(max-width:660px) {
+    /* 個人網站標題 */
+    .website-title span{
+        font-size: 48px;
+    }
+
+    .nav{
+        padding: 3px;
+    }
+    .navmain{
+        width: 100%;
+    }
+    .navitem{
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #title-about{
+        height: 30px;
+    }
+    .a{
+        display: none;
+    }
+    .contact-title{
+        font-size: 20px;
+    }
+    .contact{
+        font-size: 10px;
+    }
+    .contact-out{
+        padding: 0 60px;
+    }
+}
+
+
+
+

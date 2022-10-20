@@ -1,0 +1,80 @@
+/* 平板尺寸的設定 */
+
+@media(max-width:1200px) {
+    .page{
+        gap: 15px;
+    }
+    .text p{
+        font-size: 14px;
+        line-height: 30px;
+    }
+}
+@media(max-width:930px) {
+    
+    .text p{
+        font-size: 12px;
+        line-height: 25px;
+    }
+    .page span{
+        font-size: 13px;
+    }
+    .me{
+        padding: 5px;
+    }
+    .intrest{
+        padding: 5px;
+    }
+    .future{
+        padding: 5px;
+    }
+    .a img{
+        max-width: 100vh;
+    }
+}
+@media(max-width:800px){
+    .a {
+        display: none;
+    }
+    .text p{
+        font-size: 14px;
+        line-height: 30px;
+    }
+    /* 經歷條 */
+    .timeline::before{
+        left: 15px;
+    }
+    .timeline::after {
+        left: 15px;
+        }
+        
+        /* Full-width containers */
+        .container {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+        }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        .left::before {
+          top: 20px;
+          left: 35px;
+          border-width: 10px 15px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+        .right::before{
+          top: 20px;
+          left: 35px;
+          border-width: 10px 15px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+      
+        /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+        left: 8px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .right {
+        left: 0%;
+        }
+}

@@ -1,0 +1,445 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #EDEDED;
+    font-family: Helvetica, sans-serif;
+    position: relative;
+    user-select:none;
+}
+/* 個人網站標題 */
+.website-title{
+    display: flex;justify-content: center;align-items: center;
+    width: 100%;
+    padding: 30px;
+    background-color: #EDEDED;
+}
+.website-title span{
+    padding: 20px;
+    font-family:fantasy,cursive;
+    font-size: 60px;
+    /* margin: 30px; */
+}
+
+
+
+
+/* 導航欄外殼 */
+.main{
+    display: flex;justify-content: center;align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 5px;
+}
+.navmain{
+    z-index: 1;
+    width: 70%;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 2px 2px rgb(12, 12, 12);
+}
+/* 導航欄內殼 */
+.nav{
+    padding:10px;
+    display: flex;
+    flex: auto;
+}
+/* 內殼選項 */
+.navitem{
+    flex:1;
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    border-right: 2px black dashed;
+    /* transition-duration:2s; */
+}
+.navitem:hover{
+    background-color: #6d6b6b;
+}
+/* 點擊導航欄平順移到指定位置 */
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* 導航到關於我 */
+#title-about{
+    height: 40px;
+}
+/* 關於我(標題設置) */
+.title{
+    padding: 40px;
+    text-align: center;
+    font-size: 40px;
+    background-color: #EDEDED;
+}
+/* 關於我區塊外殼設置 */
+.aboutmeall{
+    display: flex;justify-content: center;align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #EDEDED;
+}
+/* 介紹區塊外殼設置 */
+.aboutme{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+/* 內嵌點選介紹頁面配置 */
+.page{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr ;
+    gap: 40px;
+    grid-template-areas: 
+    "me text text text"
+    "intrest text text text"
+    "future text text text"
+    ;
+    user-select: none;
+}
+.page div{
+    border: 3px solid black ;
+    border-radius:25% ;
+}
+/* 介紹頁面內建項目 */
+.me{
+    display: flex;justify-content: center;align-items: center;
+    grid-area:me;
+    cursor: pointer;
+    padding: 10px;
+}
+.me:hover{
+    background-color: #6f4ff2;
+}
+.intrest{
+    display: flex;justify-content: center;align-items: center;
+    grid-area: intrest;
+    cursor: pointer;
+    padding: 10px;
+}
+.intrest:hover{
+    background-color: #cbee40;
+}
+.future{
+    display: flex;justify-content: center;align-items: center;
+    grid-area:future;
+    cursor: pointer;
+    padding: 10px;
+}
+.future:hover{
+    background-color: #f37b31;
+}
+.text{
+    min-height: 420px;
+    padding: 40px;
+    /* display: flex;justify-content: center;align-items: center; */
+    grid-area:text;
+}
+.text p{
+    font-size: 17px;
+    line-height: 30px;
+}
+/* 內文自動換行 */
+.text p::placeholder{
+    white-space: normal;
+}
+.a{
+    padding: 20px;
+    display: flex;justify-content: center;align-items: center;
+    border: 3px solid black ;
+    border-radius: 20px;
+}
+.a img{
+    object-fit:cover;
+}
+
+
+
+
+/* 導航到經驗 */
+/* .exhr{
+    position: absolute;
+    top: 806px;
+} */
+/* 經驗條外部設置 */
+.timeline{
+    max-width: 1200px;  
+    position: relative;
+    margin: 0 auto;
+}
+/* 時間軸黑線 */
+.timeline::after{
+    content: "";
+    position: absolute;
+    top: 0px;;
+    bottom: 10px;
+    width: 5px;
+    left: 50%;
+    background-color: black;
+}
+/* 時間軸箭頭 */
+.timeline::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    margin-left: -12px;
+    width: 0;
+    border: medium solid black;
+    border-width:20px 15px 0px 15px;
+    border-color: black transparent transparent transparent;
+}
+/* 文字框外部(含content)設定 */
+.container{
+    padding: 10px 30px;
+    position: relative;
+    width: 50%;
+}
+.content p{
+    line-height: 30px;
+}
+/* 文字框後的圓點 */
+.container::after{
+    content: "";
+    position:absolute;
+    z-index: 1;
+    top: 20px;
+    right: -12px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    background-color: #1c0676;
+    border-radius: 50%;
+}
+/* 左邊框位置 */
+.left{
+    left: 0;
+}
+/* 右邊框位置 */
+.right{
+    left: 50%;
+}
+/* 調整右邊框圓點的位子 */
+.right::after{
+    left:-7px;
+}
+/* 左右邊框箭頭 */
+.left::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 15px;
+    width: 0;
+    border: medium solid white;
+    border-width:10px 0 10px 15px ;
+    border-color: transparent transparent transparent white;
+}
+.right::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 15px;
+    width: 0;
+    border: medium solid white;
+    border-width: 10px 15px 10px 0px;
+    border-color: transparent white transparent transparent;
+}
+/* 實體content設定 */
+.content{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+}
+.content h2{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 0 20px;
+}
+
+
+
+
+/* 導航到技能 */
+/* .exskill{
+    position: absolute; 
+    top:1830px;
+} */
+/* 技能條背景 */
+.skill-back{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 實際技能框配置 */
+.all-skill{
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+/* 名稱設置 */
+.skill-name{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(63, 57, 57);
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+/* 進度條外框 */
+.skill-line{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+/* 進度條內部 */
+.skill-per{
+    height: 14px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    border-radius: 3px;
+    position: relative;
+    animation: fill-line 2.5s ;
+}
+/* 技能percent顯現 */
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #704ff6;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+/* percent箭頭 */
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #704ff6;
+    top: -19.5px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+/* 動畫 */
+@keyframes fill-line {
+    from{
+        width: 0;
+    }    
+    to{
+        width: 100%;
+    }
+}
+
+
+
+/* 作品即設定 */
+.all-portfolio{
+    width: 100%; 
+    min-height: 50vh ; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 30px 30px 40px 30px;
+}
+.portfolio{
+    max-width: 1200px;
+}
+.outportfolio{
+    border-collapse: collapse;
+}
+.outportfolio tr,td{
+    padding: 20px 10px;
+    border: medium solid #595555;
+}
+.outportfolio td{
+    text-align: center;
+    vertical-align:middle ;
+}
+
+
+
+
+/* 連絡我設置 */
+.contactmeall{
+    background-color: #ceb0b0;
+    padding: 50px 0 50px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-out{
+    display: flex;
+    max-width: 1200px;
+}
+
+.contact-title{
+    font-size: 30px;
+    font-weight: 800;
+    padding: 0 20px 30px 0 ;
+}
+.contact{
+    position: relative;
+}
+.contact div{
+    padding: 10px 0;
+}
+.contact a{
+    text-decoration: none;
+    color: #1c0676;
+}
+.contact a:hover{
+    color: #3911d7;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    list-style:none;
+}
+.footer-menu li{
+    margin: 10px;
+    font-size: 30px;
+}
+.footer-menu a:hover{
+    color: black;
+}
+
+
+
+.go-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 50px;
+    color: #3911d7;
+}
+
+
+
+
+

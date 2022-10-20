@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8"/>
+        <title>louis' website</title>
+        <!-- <link rel="stylesheet" href="css Reset.css"/> -->
+        <link rel="stylesheet" href="display.css"/>
+        <link rel="stylesheet" href="ipaddisplay.css"/>
+        <link rel="stylesheet" href="phonedisplay.css"/>
+        <link rel="icon" href="/favicon.ico">
+        <script src="https://kit.fontawesome.com/e970d8e409.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- 個人網站標題 -->
+        <div class="website-title"><span>louis' website</span></div>
+        <!-- 懸浮導航欄 -->
+        <div class="main">
+            <div class="navmain">
+                <div class="nav">
+                <a href="#title-about" class="navitem" style="border-left:2px black dashed ;">About Me</a>
+                <a href="#title-experience" class="navitem">Experience</a>
+                <a href="#title-skill" class="navitem" id="skill-move">Skill</a>
+                <a href="#title-Portfolio" class="navitem">Portfolio</a>
+                <a href="#title-contact" class="navitem">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 導航到關於我 -->
+        <div id="title-about"></div>
+        <!-- <hr id="title-about" class="abouthr"/> -->
+        <!-- 關於我區塊 -->
+        <div class="title" >About me</div>
+        <div class="aboutmeall">
+            <div class="aboutme">
+                <div class="page">
+                    <div class="me" onclick="tome();"><span><i><b>關於我</b></i></span></div>
+                    <div class="intrest" onclick="tointrest();"><span><i><b>個人特色興趣</b></i></span></div>
+                    <div class="future" onclick="tofuture();"><span><i><b>未來展望</b></i></span></div>
+                    <div class="text" id="me">
+                        <p><b>自我介紹</b> : 我是奕翰，來自嘉義市。我於2022年6月從實踐資訊科技與管理學系畢業。在大學期間主修程式語言，
+                        對於資訊、社群領域充滿興趣，勇於探索、嘗試全新的事物，亦有主動且良好的學習能力，常常學習新的事物、技能和技術。我的大四專題，
+                        是在Android Studio平台上透過Java所撰寫的一個聊天機器人，我們的初衷是希望能透過此聊天機器人，解決一般民眾對於查詢法規的不方便
+                        ，而在製作的過程中我們也學習到了很多知識，也覺得很有趣。在專題製作後提升了對軟體開發的興趣，並且於畢業後持續學習其他語言
+                        ，抱持著在資訊的世界裡是永遠學不完的心態，努力不斷的進步，平常也有利用痞客邦在記錄自己的學習歷程，與檢視自己的不足。</p></div>
+                    <div class="text" style="display: none;" id="intrest">
+                        <p><b>我的興趣</b> : 早在小學三四年級時，就接觸到了電腦，也因為小時候愛玩的緣故，造就了我喜愛電腦遊戲的興趣
+                        也因為這樣，我時不時會思考這些呈現在電腦上面的虛擬畫面是怎麼被製作出來的，而在我高中時偶然聽到同學玩遊戲時使用了腳本，經過了解才
+                        得知了軟體程式語言這個領域，大學也才選擇這個科系來嘗試看看。我的興趣還有看電影，我很喜歡沉浸在電影的世界裡享受當中的氛圍。
+                        <br/>
+                        <b>我的個人特色</b> : 待人真誠，好奇心強，樂觀謙卑，喜好學習新事物，勇於向困難挑戰。
+                    </p></div>
+                    <div class="text" style="display: none;" id="future"><p><b>我對未來的目標與期許</b> : <br/>
+                        1. 未來能夠成為全端的工程師<br/>
+                        2. 在學習的過程中不要選擇安逸<br/>
+                        3. 希望未來有機會可以帶領一個Team製作一個產品<br/>
+                        4. 希望能夠認識許多很資深有能力的工程師，能夠互相學習切磋<br/>
+                        5. 架設一個屬於自己的部落格分享自己的成長過程，然後文筆不要像現在那麼爛XD<br/>
+                        總結 : 不管是前、後端我都願意學習，不斷的精進自己
+                        ，在進步的過程中同時也希望能夠為自己所屬的公司增加產值。<br/>
+                        <i><b>I can do all things - stephen curry</b></i>
+                    </p></div>
+                </div>
+            </div>
+            <div class="a"><img src="個人照.jpg"></div>
+        </div>
+
+
+        <!-- 導航到我的經歷 -->
+        <div id="title-experience" style="height: 50px;"></div>
+        <!-- <hr id="title-experience" class="exhr"/> -->
+        <!-- 我的經歷條區塊 -->
+        <div class="title" >Experience</div>
+        <div style="height: 40px;"></div>
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <h2>2018.04-08</h2>
+                    <p><b>我的第一次打工 - 麥當勞 : </b><br/>
+                    這是在我高中時期人生第一次踏出社會去體驗工作的辛苦，我主要負責的是內場餐廚人員，我從這個工作學習到的是團隊合作的重要性，
+                    因為在麥當勞很講求餐點製作的時間性，你需要在有限的時間內將餐點做好並送出，那麼跟自己的夥伴合作就變得相當重要了，需要卻
+                    保每個人都能很流暢的將自己份內的事做好，如果有人掉鏈就會造成餐點完成的拖延與不完全。
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>2018.09</h2>
+                    <p><b>大學生活 - 實踐大學 : </b> <br/>
+                    開始時長為4年的大學生活，對自己所會學習到的事物感到好奇，也很期待自己將要認識的朋友，體驗四年自己在外面生活的開端。
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>2019暑假</h2>
+                    <p><b>打零工 - 陽光書局 : </b><br/>
+                    我在暑假時期因為沒有事做所找的小打工，主要負責內、外場的工作，這次工作類型比較吃體力，內容是要在倉庫裡面將大量的教科書
+                    進行分裝、打包，並且在打包結束後要將指定的書送往各個書局與學校，這次的工作體驗讓我多少有了與客戶交流的經驗，也能夠順便
+                    提升與陌生人的溝通能力。
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>2022/02/21 - 05/31</h2>
+                    <p><b>實習 - 勤業眾信 : </b><br/>
+                    在畢業之前我找了有關於本科系的實習，內容主要是去各公司檢查他們的系統，包刮密碼原則、權限、防火牆的設置有沒有允當等等，雖然
+                    跟程式開發沾不上邊，但是我也鍛鍊到了做事的仔細性，很多小細節只要失誤就可能會導致接下來的工作受到影響，我很開心能有這次的工作機會，
+                    透過這次的經歷我也確定我比較偏好於程式開發類的工作，這讓我對未來會受到的困難感到興奮與期待。
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>2022/06</h2>
+                    <p><b>畢業 - 實踐大學 : </b><br/>
+                    時長4年的大學生活結束了，對於這所學校所認識的同學、朋友感到不捨，也懷念在大學時期跟女友、朋友生活的點點滴滴，然而這並不是結束，
+                    未來還有許多的困難需要我們去經歷與體會，畢竟經一事，長一智。
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>2022/06 - 至今</h2>
+                    <p><b>等待當兵 : </b>
+                    在這段時間我一直膠著要先從前端還是後端入手，但是在我嘗試了前後端的基礎之後我決定先從以前端為主進入軟體業這個世界，因為我發現前後
+                    端我都覺得不錯，所以我最近不斷增強自己的知識與技能，目前著重於Html、CSS、Javascript的學習，未來會繼續往php與資料庫學習，在軟體業
+                    不會有學完的這件事，只會不斷的出現新的技術需要學習。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 導航到我的技能 -->
+        <div id="title-skill" style="height: 50px;"></div>
+        <!-- <hr id="title-skill" class="exskill"/> -->
+        <!-- 我的經歷條區塊 -->
+        <div class="title">Skill</div>
+        <div class="skill-back">
+            <div class="all-skill">
+                <div class="skill">
+                    <div class="skill-name">Html</div>
+                    <div class="skill-line">
+                        <div class="skill-per" per="95%" style="max-width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">css</div>
+                    <div class="skill-line">
+                        <div class="skill-per" per="80%" style="max-width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Javascript</div>
+                    <div class="skill-line">
+                        <div class="skill-per" per="65%" style="max-width: 65%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">mysql</div>
+                    <div class="skill-line">
+                        <div class="skill-per" per="75%" style="max-width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">php</div>
+                    <div class="skill-line">
+                        <div class="skill-per" per="45%" style="max-width: 45%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 導航到我的作品 -->
+        <div id="title-Portfolio" style="height: 50px;"></div>
+        <!-- <hr id="title-Portfolio" class="toPortfolio"/> -->
+        <!-- 我的作品區塊 -->
+        <div class="title">Portfolio</div>
+        <div class="all-portfolio">
+            <div class="portfolio">
+                <table class="outportfolio">
+                    <tr>
+                        <td style="white-space: nowrap;">作品名稱</td>
+                        <td style="min-width: 100px;">狀態</td>
+                        <td>作品介紹、進度</td>
+                        <td style="min-width: 100px;">連結</td>
+                    </tr>
+                    <tr>
+                        <td>響應式個人網站</td>
+                        <td style="color: blue;">已完成</td>
+                        <td style="text-align: left;"><p>這是我製作完成的第一個響應式網頁，主要是在介紹自己的喜好個性和人生中的經歷
+                            ，包括就學、工作、實習經驗等等，以及講述我對未來的打算、目標和目前計畫開發的個人project計畫。<p></td>
+                        <td>此網站</td>
+                    </tr>
+                    <tr>
+                        <td>英國旅遊網站</td>
+                        <td style="color:red ;">開發中</td>
+                        <td style="text-align: left;"><p>這是我第一個構思完成的個人project，主要動機是今年女友出國留學時想到所構建的
+                        ，希望他在國外學習之餘出去看看時，可以更方便的安排行程，但因為是第一次所嘗試很多的情況都沒有考慮進去，
+                        像是資料太多所需要資料庫的問題，以及php後端串接資料庫的問題，目前還在持續增加自己的能力，之後能夠完成。</p></td>
+                        <td>無</td>
+                    </tr>
+                    <tr>
+                        <td>購物網站</td>
+                        <td style="color: red;">討論中</td>
+                        <td style="text-align: left;"><p>此為我跟同學共同決定要一起製作的購物網站，是我其中一位同學的媽媽要求他希望能夠做出
+                        一個購物網站給她使用，所以需要配合到跟同學們的進度，在這邊我預計會主要負責後端的部分，像是會員系統、購物車、資料庫串接
+                        等等，目前還在跟同學討論中。</p></td>    
+                        <td>無</td>
+                    </tr>
+                    <tr>
+                        <td>會計記帳系統</td>
+                        <td style="color: red;">討論中</td>
+                        <td style="text-align: left;"><p>這是預計幫我母親製作的會計網頁，希望功能是能夠幫助母親在會計作業上更加的便利，目前還需跟母親討論
+                        </p></td>
+                        <td>連結</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <!-- 聯絡人訊息 -->
+        <footer class="contactmeall" id="title-contact">
+            <div class="contact-out">
+                <div class="contact">
+                    <div class="contact-title">Contact Me</div>
+                    <div>
+                        <span>聯絡人 : 呂先生</span>
+                        <span>電話 : 0977158979</span>
+                    </div>
+                    <div><span>Email : monsteryihan@gmail.com </span><a href="mailto:monsteryihan@gmail.com"> Send Email</a></div>
+                    <div><span>我的痞克邦 : Monster新手的程式筆記 </span><a href="https://streamtopic.pixnet.net/23596/posts?utm_source=PIXNET&utm_medium=follower_list&utm_content=1490062ef2ab0b4efa&fbclid=IwAR0VlU6Zzm5mylAPO4edeXdjwTfMhAZSv_tAFZzUhMJTHfmv7FeSG1d4xLE" target="_blank">點我</a></div>
+                </div>
+                <div class="icon">
+                    <ul class="footer-menu">
+                        <li><a href="https://www.facebook.com/profile.php?id=100002953646501" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/cs95153/"target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://line.me/ti/p/w-2VvTFpi_"target="_blank"><i class="fa-brands fa-line" ></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+            
+        
+        <!-- 固定於底部的首頁按鍵 -->
+        <a href="#" class="go-to-top"><i class="fa-solid fa-house"></i><a>
+
+
+        <script  type="text/javascript" src="myself.js"></script>
+    </body>
+</html>
